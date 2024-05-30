@@ -1,20 +1,30 @@
+import './global.css';
+import Navbar from './navbar';
+import Footer from './footer';
 
 export default function Contact(){
     return(
-        <section>
-            <header className = "contact-header">
+        <>
+        <Navbar/>
+        <video src="../public/main.mp4" autoPlay={true} muted loop className="absolute -z-10 w-full h-full object-cover"></video>
+        <section className="relative h-[90vh] w-screen pt-[10vh]">
+            <header className="w-screen text-slate-50 text-4xl underline px-8 py-5">
                 Contact me
-                <div className ="contact-underline"></div>
            </header>
 
-           <div className = "contact">
-              <input type = "text" name = "Name" placeholder ="Enter your name"></input>
-              <input type = "text" name = "E-mail" placeholder = "E-mail"></input>
-              <input type = "text" name = "Phone Number" placeholder ="Phone number"></input>
-              <input type = "url" name = "Social Meadia Link" placeholder ="Social media link"></input>
+           <div className ="w-screen grid grid-cols-1 gap-y-10 px-12 py-10">
 
-              <button className = "submit-button">Submit</button>
+              <input className ="contact-container" type = "text" value = "Name" placeholder ="Enter your name"></input>
+              <input className ="contact-container" type = "text" value = "E-mail" placeholder = "E-mail"></input>
+              <input className ="contact-container" type = "text" value = "Phone Number" placeholder ="Phone number"></input>
+              <input className ="contact-container" type = "url" value = "Social Meadia Link" placeholder ="Social media link"></input>
+
+              <input type="submit" value="submit" className = "h-10 w-1/5 bg-slate-700 text-slate-200 font-bold rounded-lg place-self-center">
+             </input>
+
            </div>
         </section>
+        <Footer/>
+        </>
     );
 }

@@ -1,50 +1,67 @@
-
+import './global.css';
+import Navbar from './navbar';
+import Footer from './footer';
 
 export default function Skills() {
   return(
-    <section>
-    <header className = "skills-header">
-        Skills Stack
-    </header>
+    <>
+      <Navbar/>
+      <video src="../public/main.mp4" autoPlay={true} muted loop className="absolute -z-10 w-full h-full object-cover"></video>
+      <section className="relative h-[90vh] w-screen pt-[10vh]">
+      <header className ="w-auto text-slate-50 text-4xl px-8 py-5 peer">
+          Skills Stack
+          <div className="h-2 w-44 rounded-lg bg-sky-600 cursor-pointer invisible peer-hover:visible"></div>
+      </header>
 
-    <div className="skills">
-          <div className="container">
-             <p className = "skill-name">HTML</p>
-              <p className="about-skill">
-              Proficient in crafting well-structured and semantic web pages using HTML5. Adept at creating clear document outlines and optimizing content for accessibility and search engine optimization (SEO). 
-              Ensures cross-browser compatibility and responsive design, adhering to the latest web standards.
+      <div className="w-screen grid grid-cols-3 gap-x-10 gap-y-10 px-10 py-10">
+  
+          <div className="skills-container">
+             <p className = "font-semibold text-xl px-3">HTML</p>
+             <p className="skill-info">
+              Proficient in crafting well-structured and semantic web pages using HTML5. Adept at creating clear document outlines and optimizing content for accessibility and search engine optimization (SEO).
               </p>
           </div>
-          <div className="container">
-             <p className = "skill-name">CSS</p>
-              <p className="about-skill">
-              Skilled in styling web pages with CSS3, focusing on creating visually appealing and responsive designs. Proficient in leveraging CSS frameworks such as Bootstrap to streamline development processes.
-              Experience in managing layout, typography, and responsive media queries.
+          <div className="skills-container">
+             <p className = "font-semibold text-xl px-3">CSS</p>
+              <p className="skill-info">
+              Skilled in styling web pages with CSS3, focusing on creating visually appealing and responsive designs.
               </p>
           </div>
-          <div className="container">
-             <p className = "skill-name">JS</p>
-              <p className="about-skill">
+          <div className="skills-container">
+             <p className = "font-semibold text-xl px-3">Tailwind + Bootstrap</p>
+              <p className="skill-info">
+              Proficient in leveraging CSS frameworks such as  Tailwind CSS and Bootstrap to create visually appealing and responsive web designs, ensuring a seamless user experience.
+              </p>
+          </div>
+          <div className="skills-container">
+             <p className = "font-semibold text-xl px-3">Javascript</p>
+              <p className="skill-info">
               Demonstrates a strong proficiency in JavaScript, with a comprehensive understanding of ES6 features. 
-              Excels in creating interactive and dynamic web pages, utilizing JavaScript libraries and frameworks for improved user experiences. 
               Knowledgeable about asynchronous programming, promises, and event-driven architecture.
               </p>
           </div>
-          <div className="container">
-             <p className = "skill-name">REACT</p>
-              <p className="about-skill">
-              Experienced in developing modern single-page applications using React.js. Proficient in building reusable and modular components, implementing state management, and integrating with RESTful APIs. 
+          <div className="skills-container">
+             <p className="font-semibold text-xl px-3">React.js</p>
+              <p className="skill-info">
+              Experienced in developing modern single-page applications using React.js. 
               Familiar with React Router for effective navigation and user interface development.
               </p>
           </div>
-          <div className="container">
-             <p className = "skill-name">GIT & GITHUB</p>
-              <p className="about-skill">
+          <div className="skills-container">
+             <p className = "font-semibold text-xl px-3">Next.js</p>
+              <p className="skill-info">
+              Experienced in utilizing its powerful features for server-side rendering and automatic code splitting to enhance scalability and optimize load times.
+              </p>
+          </div>
+          <div className="skills-container">
+             <p className = "font-semibold text-xl px-3">Git & Github</p>
+              <p className="skill-info">
               Proficient in version control using Git, with a strong emphasis on collaboration through GitHub. Skilled in branching, merging, and conflict resolution. 
-              Actively engages in pull requests and code reviews to ensure code quality and effective teamwork.
               </p>
           </div>
       </div>
       </section>
+      <Footer/>
+    </>
   );
 }

@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    box-sizing: border-box;
+}
+
+.skill-info::-webkit-scrollbar{
+    background: transparent;
+}
+
+@layer components{
+    .nav-item{
+        @apply text-2xl text-white font-bold hover:underline;
+    }
+    .skills-container{
+       @apply h-20 rounded-lg bg-slate-700 text-slate-50 px-3 py-2 flex justify-evenly items-center bg-contain;
+    }
+    .skill-info{
+        @apply pl-5 overflow-y-scroll h-full;
+    }
+    .contact-container{
+        @apply h-4 w-1/3 px-4 py-4 text-slate-200 underline bg-transparent;
+    }
+}
+
+
