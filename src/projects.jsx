@@ -8,51 +8,45 @@ import { faYoutube } from '@fortawesome/free-brands-svg-icons/faYoutube';
 export default function Projects(){
 
     return(
-    <>
+<>
+    <video src="../public/main.mp4" autoPlay={true} muted loop className="absolute -z-10 w-screen h-screen object-cover"></video>
     <Navbar/>
-    <video src="../public/main.mp4" autoPlay={true} muted loop className="absolute -z-10 w-full h-full object-cover"></video>
-    <section className="relative h-[90vh] w-screen pt-[10vh]">
+    <section className="relative z-0 h-[80vh] w-screen">
 
-      <header className ="w-screen text-slate-50 text-4xl underline px-8 py-5">
+      <header className ="h-[10vh] w-screen text-white text-2xl p-4 flex justify-start items-center font-semibold
+      sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:textt-4xl
+      sm:p-4 md:p-4 lg:p-6 xl:p-8 2xl:p-10">
         Projects
       </header>
 
-      <div className ="w-screen grid grid-cols-2 place-items-center gap-10 p-10">
+      <div className ="h-[70vh] w-screen p-4 grid place-items-center gap-10 overflow-y-scroll custom
+       sm:grid-cols-1 sm:grid-rows-3 md:grid-cols-1 md:grid-rows-3 lg:grid-cols-1 lg:grid-rows-3
+       xl:grid-cols-2 xl:grid-rows-2 2xl:grid-cols-2 2xl:grid-rows-2
+       sm:p-4 md:p-4 lg:p-6 xl:p-8 2xl:p-10">
 
-      <div className="h-full w-2/3 rounded-lg bg-slate-700 text-white flex justify-evenly items-center">
-        <div className="h-full w-1/3 flex justify-center items-center rounded-l-lg bg-purple-800">
-        <FontAwesomeIcon icon={faUser} className="text-5xl" />
-       </div>
-       <div className="mx-3 my-2">
-          <p>A personal portfolio website for official purposes.</p>
-          <a href="#" className="text-blue-500">Click here to view website</a>
-       </div>
+       {
+        [
+          ["1",faUser,"#","A personal portfolio website for official purposes."],
+          ["2",faFlagCheckered,"#","A website for live streaming formula 1 races."],
+          ["3",faYoutube,"#","A youtube clone website made with HTML & CSS."],
+        ].map(([key,icon,link,description,color]) =>(
+          <div key={key} className="h-2/3 w-full rounded-lg bg-slate-700 text-white flex justify-evenly items-center
+          sm:h-full sm:w-2/4 md:h-full md:w-3/4 lg:h-full lg:w-2/4 xl:h-2/4 xl:w-3/4 2xl:h-2/4 2xl:w-3/4">
+
+            <div className="h-full w-1/3 py-4 flex justify-center items-center rounded-l-lg bg-contain bg-purple-800">
+              <FontAwesomeIcon icon={icon} className="text-5xl" />
+           </div>
+
+           <div className="h-full w-2/3 m-2 overflow-y-scroll custom">
+              <p>{description}</p>
+              <a href={link} className="text-blue-500">Click here to view web app!</a>
+           </div>
+
+         </div>
+        ))}
       </div>
-
-      <div className="h-full w-2/3 rounded-lg bg-slate-700 text-white flex justify-evenly items-center">
-        <div className="h-full w-1/3 flex justify-center items-center rounded-l-lg bg-sky-600">
-         <FontAwesomeIcon icon={faFlagCheckered} className="text-5xl" />
-        </div>
-       <div className="mx-3 my-2">
-          <p>A website for live streaming formula 1 races.</p>
-          <a href="#" className="text-blue-500">Click here to view website</a>
-       </div>
-      </div>
-
-      <div className="h-full w-2/3 rounded-lg bg-slate-700 text-white flex justify-evenly items-center">
-        <div className="h-full w-1/3 flex justify-center items-center rounded-l-lg bg-red-600">
-        <FontAwesomeIcon icon={faYoutube} className="text-5xl" />
-       </div>
-       <div className="mx-3 my-2">
-          <p>A youtube clone website made with HTML & CSS.</p>
-          <a href="#" className="text-blue-500">Click here to view website</a>
-       </div>
-      </div>
-
-    </div>
-
-  </section>
-  <Footer/>
-  </>
-  );
+   </section>
+   <Footer/>
+</>
+);
 }
