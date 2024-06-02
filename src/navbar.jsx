@@ -7,10 +7,10 @@ export default function Navbar(){
 
           {
             [
-              ["1","./","Home"],
-              ["2","./skills","Skills"],
-              ["3","./projects","Projects"],
-              ["4","./contact","Contact"],
+              ["1","/","Home"],
+              ["2","/skills","Skills"],
+              ["3","/projects","Projects"],
+              ["4","/contact","Contact"],
             ].map(([key,link,navOption])=>(
              <>
               <a key={key} href={link} className="h-auto w-auto text-sm text-white font-medium group
