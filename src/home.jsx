@@ -23,8 +23,9 @@ export default function Hero() {
 
   return(
     <>
-    <video src="../public/main.mp4" autoPlay={true} muted loop className="absolute -z-10 w-screen h-screen object-cover"></video>
+    <video src="./public/main.mp4" autoPlay={true} muted loop className="absolute -z-10 w-screen h-screen object-cover"></video>
     <Navbar/>
+    
     <section className="relative z-0 h-[80vh] w-screen p-4 flex justify-evenly items-center flex-wrap-reverse
     sm:flex-nowrap md:flex-nowrap lg:flex-nowrap xl:flex-nowrap 2xl:flex-nowrap
     sm:p-4 md:p-4 lg:p-6 xl:p-8 2xl:p-10">
@@ -46,14 +47,17 @@ export default function Hero() {
 
      <div className="h-auto w-1/3 text-lg my-4 flex justify-between items-center 
      sm:text-xl md:text-xl lg:text-2xl xl:text-4xl 2xl:text-4xl">
-       <a href="https://github.com/sainathkamble">
-        <FontAwesomeIcon icon={faGithub} className="text-white cursor-pointer" />
+       <a href="https://github.com/sainathkamble" className="group">
+        <FontAwesomeIcon icon={faGithub} className="text-white cursor-pointer"/>
+        <div className="h-1.5 w-0 group-hover:w-auto transition delay-0 duration-700 ease-in-out rounded-lg bg-sky-600"></div>
        </a>
-       <a href="https://www.instagram.com/sainath.io/">
-        <FontAwesomeIcon icon={faInstagram} className="text-white cursor-pointer" />
+       <a href="https://www.instagram.com/sainath.io/" className="group">
+        <FontAwesomeIcon icon={faInstagram} className="text-white cursor-pointer"/>
+        <div className="h-1.5 w-0 group-hover:w-auto transition delay-0 duration-700 ease-in-out rounded-lg bg-sky-600"></div>
        </a>
-       <a href="https://x.com/sainaththedev">
-        <FontAwesomeIcon icon={faXTwitter} className="text-white cursor-pointer" />
+       <a href="https://x.com/sainaththedev" className="group">
+        <FontAwesomeIcon icon={faXTwitter} className="text-white cursor-pointer"/>
+        <div className="h-1.5 w-0 group-hover:w-auto transition delay-0 duration-700 ease-in-out rounded-lg bg-sky-600"></div>
        </a>
      </div>
     </div>

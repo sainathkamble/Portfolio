@@ -5,13 +5,16 @@ import Footer from './footer';
 export default function Skills() {
   return(
     <>
-      <video src="../public/main.mp4" autoPlay={true} muted loop className="absolute -z-10 w-screen h-screen object-cover"></video>
+      <video src="./public/main.mp4" autoPlay={true} muted loop className="absolute -z-10 w-screen h-screen object-cover"></video>
       <Navbar/>
       <section className="relative z-0 h-[80vh] w-screen">
       <header className ="h-[10vh] w-screen flex justify-start items-center font-semibold text-white text-2xl p-4
       sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:textt-4xl
       sm:p-4 md:p-4 lg:p-6 xl:p-8 2xl:p-10">
-          Skills Stack
+          <span className="group cursor-pointer">
+            Technical Skills
+            <div className="h-1.5 w-0 group-hover:w-auto transition delay-0 duration-700 ease-in-out rounded-lg bg-sky-600"></div>
+          </span>
       </header>
 
       <div className="h-[70vh] w-screen p-4 grid place-items-center gap-10 bg-contain overflow-y-scroll custom
