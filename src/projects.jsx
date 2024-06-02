@@ -1,7 +1,7 @@
 import './global.css';
 import Navbar from './navbar';
 import Footer from './footer';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBowlFood, faFlagCheckered , faUser } from '@fortawesome/free-solid-svg-icons';
 import { faYoutube } from '@fortawesome/free-brands-svg-icons/faYoutube';
 
