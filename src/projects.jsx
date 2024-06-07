@@ -8,7 +8,7 @@ import { faYoutube } from '@fortawesome/free-brands-svg-icons/faYoutube';
 export default function Projects(){
 
     return(
-<>
+    <>
     <video src="/main.mp4" autoPlay={true} muted loop className="absolute -z-10 w-screen h-screen object-cover"></video>
     <Navbar/>
     <section className="relative z-0 h-[80vh] w-screen">
@@ -33,7 +33,7 @@ export default function Projects(){
           ["2",faFlagCheckered,"https://f1withsainath.vercel.app/","A website for live streaming formula 1 races with feature of checking race time in different time zones."],
           ["4",faBowlFood,"https://campus-cafe.vercel.app/","A web app to order food in local cafeteria with order code generating feature which is not done yet. It will be done with backend + DB ASAP."],
           ["4",faYoutube,"https://you-tubeclone-coral.vercel.app/","A youtube clone website made with HTML & CSS based on Reacct.js further backend + DB will be done ASAP."],
-        ].map(([key,icon,link,description,color]) =>(
+        ].map(([key,icon,link,description]) =>(
           <div key={key} className="h-2/3 w-full rounded-lg bg-slate-700 text-white flex justify-evenly items-center
           sm:h-full sm:w-2/4 md:h-full md:w-3/4 lg:h-full lg:w-2/4 xl:h-2/4 xl:w-3/4 2xl:h-2/4 2xl:w-3/4">
 
@@ -47,10 +47,11 @@ export default function Projects(){
            </div>
 
          </div>
-        ))}
+        ))
+      }
       </div>
    </section>
    <Footer/>
-</>
+   </>
 );
 }
