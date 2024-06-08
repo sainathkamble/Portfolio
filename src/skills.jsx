@@ -5,7 +5,7 @@ import Footer from './footer';
 export default function Skills() {
   return(
     <>
-      <video src="/main.mp4" autoPlay={true} muted loop className="absolute -z-10 w-screen h-screen object-cover"></video>
+      <video src="./main.mp4" autoPlay={true} muted loop className="absolute -z-10 w-screen h-screen object-cover"></video>
       <Navbar/>
       <section className="relative z-0 h-[80vh] w-screen">
       <header className ="h-[10vh] w-screen flex justify-start items-center font-semibold text-white text-2xl p-4

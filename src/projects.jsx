@@ -9,7 +9,7 @@ export default function Projects(){
 
     return(
     <>
-    <video src="/main.mp4" autoPlay={true} muted loop className="absolute -z-10 w-screen h-screen object-cover"></video>
+    <video src="./main.mp4" autoPlay={true} muted loop className="absolute -z-10 w-screen h-screen object-cover"></video>
     <Navbar/>
     <section className="relative z-0 h-[80vh] w-screen">
 
