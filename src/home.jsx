@@ -23,10 +23,10 @@ export default function Hero() {
 
   return(
     <>
-    <video src="./main.mp4" autoPlay={true} muted loop className="absolute -z-10 w-screen h-screen object-cover"></video>
+    <video src="./main.mp4" autoPlay={true} muted loop className="absolute w-screen h-screen object-cover"></video>
     <Navbar/>
     
-    <section className="relative z-0 h-[80vh] w-screen p-4 flex justify-evenly items-center flex-wrap-reverse
+    <section className="relative h-[80vh] w-screen p-4 flex justify-evenly items-center flex-wrap-reverse
     sm:flex-nowrap md:flex-nowrap lg:flex-nowrap xl:flex-nowrap 2xl:flex-nowrap
     sm:p-4 md:p-4 lg:p-6 xl:p-8 2xl:p-10">
 
