@@ -3,13 +3,8 @@ import Navbar from './navbar';
 import Footer from './footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope , faPhone } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
 
 export default function Contact(){
-
-    let [contactInfo , setContactInfo] = useState(
-        {name:"" , email:"" , phoneNo:"" , socialMedia:""
-    });
 
     let name , value;
 
@@ -17,8 +12,6 @@ export default function Contact(){
         console.log(e);
         name = e.target.value;
         value = e.target.value;
-        setContactInfo({...contactInfo , [name]:value});
-
         alert("Form submitted");
     }
 
@@ -36,37 +29,33 @@ export default function Contact(){
              </span>
            </header>
 
-           <div className ="h-[70vh] w-screen p-4 flex justify-evenly items-center flex-wrap overflow-y-scroll custom
+           <div className ="h-[70vh] w-screen p-4 flex justify-center items-center flex-wrap overflow-y-scroll custom
            sm:p-4 md:p-4 lg:p-6 xl:p-8 2xl:p-10">
 
-             <form method="POST" className="h-auto w-screen grid grid-cols-1 grid-rows-5 place-items-center
+             <form method="POST" action="https://formspree.io/f/xwkggejz" className="h-auto w-screen grid grid-cols-1 grid-rows-5 place-items-center
              sm:w-2/5 md:w-2/5 lg:w-2/5 xl:w-2/5 2xl:w-2/5">
-              <input className ="h-4 w-auto bg-transparent m-2 p-4 text-white" onClick={handleSubmit} 
-              type = "text" value = {contactInfo.name} placeholder ="Enter your name"></input>
-              <input className ="h-4 w-auto bg-transparent m-2 p-4 text-white" onClick={handleSubmit} 
-              type = "text" value = {contactInfo.email} placeholder = "E-mail"></input>
-              <input className ="h-4 w-auto bg-transparent m-2 p-4 text-white" onClick={handleSubmit} 
-              type = "text" value = {contactInfo.phoneNo} placeholder ="Phone number"></input>
-              <input className ="h-4 w-auto bg-transparent m-2 p-4 text-white" onClick={handleSubmit} 
-              type = "url" value = {contactInfo.socialMedia} placeholder ="Social media link"></input>
 
-              <label><button type="submit" value="submit" onChange={handleSubmit}
-              className="h-full w-auto px-4 py-1 m-2 text-white text-xl flex justify-center items-center bg-slate-700 font-semibold rounded-lg">Submit</button></label>
+              <input className ="h-4 w-3/4 bg-transparent m-4 p-4 text-white sm:w-3/4 md:w-3/4 lg:w-1/2 xl:w-1/2 2xl:w-1/2" 
+              type = "text" name="Name" placeholder ="Enter your name" autoComplete="off" required>
+              </input>
+
+              <input className ="h-4 w-3/4 bg-transparent m-4 p-4 text-white sm:w-3/4 md:w-3/4 lg:w-1/2 xl:w-1/2 2xl:w-1/2" 
+              type = "email" name="E-mail" placeholder = "E-mail" autoComplete="off" required>
+              </input>
+
+              <input className ="h-4 w-3/4 bg-transparent m-4 p-4 text-white sm:w-3/4 md:w-3/4 lg:w-1/2 xl:w-1/2 2xl:w-1/2" 
+              type = "text" name="Contact no" placeholder ="Phone number" autoComplete="off">
+              </input>
+
+              <input className ="h-4 w-3/4 bg-transparent m-4 p-4 text-white sm:w-3/4 md:w-3/4 lg:w-1/2 xl:w-1/2 2xl:w-1/2" 
+              type = "url" name="Social media link" placeholder ="Social media link" autoComplete="off">
+              </input>
+
+              <button type="submit" value="submit" onChange={handleSubmit}
+              className="h-auto w-auto px-4 py-2 m-4 text-white text-xl flex justify-center items-center bg-sky-600 hover:bg-sky-800 font-semibold rounded-lg">
+              Submit
+              </button>
              </form>
-
-             <div className="h-auto w-screen text-white text-2xl flex justify-center items-center my-4
-             sm:w-1/5 md:w-1/5 lg:w-1/5 xl:w-1/5 2xl:w-1/5">OR</div>
-
-             <div className="h-auto w-screen flex justify-center items-center
-             sm:w-2/5 md:w-2/5 lg:w-2/5 xl:w-2/5 2xl:w-2/5">
-                <p className="h-auto w-screen text-white text-2xl grid grid-cols-1 grid-rows-2 place-items-center gap-2">
-                   <FontAwesomeIcon icon={faEnvelope} className="text-white text-xl" />
-                    kamblesainath41@gmail.com
-               
-                   <FontAwesomeIcon icon={faPhone} className="text-white text-xl" />
-                    +919152218814
-                </p>
-             </div>
              
            </div>
         </section>
