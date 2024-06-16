@@ -5,9 +5,27 @@
 *{
     box-sizing: border-box;
 }
-
 .custom::-webkit-scrollbar{
     background: transparent;
 }
 
+.under{
+    height: 6px; width:100%;
+    border-radius: 8px;
+    background-color: rgb(2,132,199);
+    visibility: hidden;
+}
+.over:hover .under{
+    animation : unani 1s ease-in-out;
+    animation-iteration-count: 1;
+    visibility: visible;
+}
+@keyframes unani{
+    0%{
+      width: 0%;
+    }
+    100%{
+       width: 100%;
+    }
+}
 

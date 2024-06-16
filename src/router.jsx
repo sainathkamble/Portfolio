@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
-import Skills from './skills';
-import Projects from './projects';
-import Contact from './contact';
+import Skills from './sec-compo/skills';
+import Projects from './sec-compo/projects';
+import Contact from './sec-compo/contact';
 
 const Router = createBrowserRouter([
     {
